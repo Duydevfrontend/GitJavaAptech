@@ -1,5 +1,8 @@
 package BTAptech;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class SinhVien {
     private int maSV;
     private String hoTen;
@@ -52,6 +55,19 @@ public class SinhVien {
 
     public void setDiemTH(double diemTH) {
         this.diemTH = diemTH;
+    }
+
+    Scanner sc = new Scanner(System.in);
+    public void nhapThongTin() {
+        try{
+        System.out.print("Ma so sinh vien: " ); setMaSV(sc.nextInt());
+        System.out.print("Ho ten sinh vien: "); setHoTen(sc.nextLine());
+        System.out.print("Diem ly thuyet: "); setDiemLT(sc.nextDouble());
+        System.out.print("Diem thuc hanh: "); setDiemTH(sc.nextDouble());}
+
+        catch (InputMismatchException e){
+            System.out.println("Error!");
+        }
     }
 
     @Override
