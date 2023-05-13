@@ -6,21 +6,20 @@ public class SinhVien {
     private double diemLT;
     private double diemTH;
 
-    @Override
-    public String toString() {
-        return "SinhVien{" +
-                "maSV=" + maSV +
-                ", hoTen='" + hoTen + '\'' +
-                ", diemLT=" + diemLT +
-                ", diemTH=" + diemTH +
-                '}';
+    public double diemTB(double diemLT, double diemTH) {
+        double diemTB = (diemLT + diemTH) / 2;
+
+        return diemTB;
+    }
+    public SinhVien() {
+
     }
 
-    public SinhVien(int _maSV, String _hoTen, double _diemLT, double _diemTH) {
-        this.maSV = _maSV;
-        this.hoTen = _hoTen;
-        this.diemLT = _diemLT;
-        this.diemTH = _diemTH;
+    public SinhVien(int maSV, String hoTen, double diemLT, double diemTH) {
+        this.maSV = maSV;
+        this.hoTen = hoTen;
+        this.diemLT = diemLT;
+        this.diemTH = diemTH;
     }
 
     public int getMaSV() {
@@ -53,6 +52,17 @@ public class SinhVien {
 
     public void setDiemTH(double diemTH) {
         this.diemTH = diemTH;
+    }
+
+    @Override
+    public String toString() {
+        return "SinhVien{" +
+                "maSV=" + maSV +
+                ", hoTen='" + hoTen + '\'' +
+                ", diemLT=" + diemLT +
+                ", diemTH=" + diemTH +
+                ", diemTB=" + diemTB(diemLT,diemTH) +
+                '}';
     }
 }
 
