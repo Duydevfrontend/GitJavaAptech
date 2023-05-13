@@ -72,7 +72,7 @@ public class SinhVien {
 
     @Override
     public String toString() {
-        return "SinhVien{" +
+        return  "\nSinhVien{" +
                 "maSV=" + maSV +
                 ", hoTen='" + hoTen + '\'' +
                 ", diemLT=" + diemLT +
