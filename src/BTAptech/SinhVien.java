@@ -61,6 +61,7 @@ public class SinhVien {
     public void nhapThongTin() {
         try{
         System.out.print("Ma so sinh vien: " ); setMaSV(sc.nextInt());
+        sc.nextLine();
         System.out.print("Ho ten sinh vien: "); setHoTen(sc.nextLine());
         System.out.print("Diem ly thuyet: "); setDiemLT(sc.nextDouble());
         System.out.print("Diem thuc hanh: "); setDiemTH(sc.nextDouble());}
