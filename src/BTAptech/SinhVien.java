@@ -1,16 +1,18 @@
 package BTAptech;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class SinhVien {
     private int maSV;
     private String hoTen;
-    private double diemLT;
-    private double diemTH;
+    private float diemLT;
+    private float diemTH;
 
-    public double diemTB(double diemLT, double diemTH) {
-        double diemTB = (diemLT + diemTH) / 2;
+    public float diemTB(float diemLT, float diemTH) {
+        float diemTB = (diemLT + diemTH) / 2;
 
         return diemTB;
     }
@@ -18,7 +20,7 @@ public class SinhVien {
 
     }
 
-    public SinhVien(int maSV, String hoTen, double diemLT, double diemTH) {
+    public SinhVien(int maSV, String hoTen, float diemLT, float diemTH) {
         this.maSV = maSV;
         this.hoTen = hoTen;
         this.diemLT = diemLT;
@@ -45,7 +47,7 @@ public class SinhVien {
         return diemLT;
     }
 
-    public void setDiemLT(double diemLT) {
+    public void setDiemLT(float diemLT) {
         this.diemLT = diemLT;
     }
 
@@ -53,7 +55,7 @@ public class SinhVien {
         return diemTH;
     }
 
-    public void setDiemTH(double diemTH) {
+    public void setDiemTH(float diemTH) {
         this.diemTH = diemTH;
     }
 
@@ -63,8 +65,8 @@ public class SinhVien {
         System.out.print("Ma so sinh vien: " ); setMaSV(sc.nextInt());
         sc.nextLine();
         System.out.print("Ho ten sinh vien: "); setHoTen(sc.nextLine());
-        System.out.print("Diem ly thuyet: "); setDiemLT(sc.nextDouble());
-        System.out.print("Diem thuc hanh: "); setDiemTH(sc.nextDouble());}
+        System.out.print("Diem ly thuyet: "); setDiemLT(sc.nextFloat());
+        System.out.print("Diem thuc hanh: "); setDiemTH(sc.nextFloat());}
 
         catch (InputMismatchException e){
             System.out.println("Error!");
