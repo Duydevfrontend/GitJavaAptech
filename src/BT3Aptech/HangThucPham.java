@@ -25,21 +25,22 @@ public class HangThucPham {
     }
 
     public void setMaHang(String maHang) throws Exception {
-        if(!maHang.trim().equals(""))
-            this.maHang = maHang;
-        else
-            throw new Exception("Lỗi: Mã hàng rỗng!");
-    }
+            if(!maHang.trim().equals("") || !maHang.trim().equals(null) )
+                throw new Exception("Lỗi: Mã hàng rỗng!");
+            else
+                this.maHang = maHang;
+        }
+
 
     public String getTenHang() {
         return tenHang;
     }
 
     public void setTenHang(String tenHang) throws Exception {
-        if(!tenHang.trim().equals(""))
-            this.tenHang = tenHang;
-        else
+        if(!tenHang.trim().equals(null) || !tenHang.trim().equals(""))
             throw new Exception("Lỗi: Tên hàng không được để trống!");
+        else
+            this.tenHang = tenHang;
     }
 
     public double getDonGia() {
@@ -96,6 +97,15 @@ public class HangThucPham {
         Calendar calendar = Calendar.getInstance();
         calendar.set(year, month - 1 , day);
         this.ngayHetHan = calendar.getTime();
+    }
+
+    public boolean kiemTraTenHang(boolean test2) {
+        if(!this.getTenHang().trim().equals("")) {
+            test2 = false;
+        }else {
+            System.out.println("Tên hàng hoá không được bỏ trống. Vui lòng nhập lại!");
+        }
+        return test2;
     }
 
     public boolean kiemTraNgay(boolean test) {

@@ -8,7 +8,7 @@ public class Main {
         HangThucPham tp = new HangThucPham();
         boolean th = true;
         System.out.println("Nhập mã hàng : ");
-        tp.setMaHang(scanner.next());
+        tp.setMaHang(scanner.nextLine());
         scanner.nextLine();
         System.out.println("Nhập tên hàng : ");
         tp.setTenHang(scanner.nextLine());
@@ -17,7 +17,7 @@ public class Main {
         do {
             System.out.println("Nhập năm,tháng,ngày sản xuất : ");
             tp.setNSX(scanner.nextInt(), scanner.nextInt(), scanner.nextInt());
-            System.out.println("nhập năm,tháng,ngày hết hạn : ");
+            System.out.println("Nhập năm,tháng,ngày hết hạn : ");
             tp.setHSD(scanner.nextInt(), scanner.nextInt(), scanner.nextInt());
         } while (tp.kiemTraNgay(th));
         System.out.println(tp);
